@@ -1,12 +1,38 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { WeatherService } from './weather.service';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [CommonModule, FormsModule],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css'],
 })
 export class App {
-  protected readonly title = signal('weather-app');
+  city = '';
+  weatherData: any = null;
+  loading = false;
+  error = '';
+
+  constructor(private weatherService: WeatherService) {}
+
+  search() {
+    if (!this.city.trim()) return;
+
+    this.loading = true;
+    this.error = '';
+
+    this.weatherService.getWeather(this.city).subscribe({
+      next: (data) => {
+        this.weatherData = data;
+        this.loading = false;
+      },
+      error: (err) => {
+        this.error = 'City could not be found';
+        this.loading = false;
+      },
+    });
+  }
 }

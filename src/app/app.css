@@ -77,12 +77,16 @@
 }
 
 .temp-div {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .temp-div h1 {
   font-size: 2.5rem;
   font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
 }
 
 .temp-div h3 {

@@ -7,7 +7,7 @@
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
   color: #1a2b3c;
-  background: linear-gradient(135deg, #c4aaff, #e3d6ff);
+  background: #3c7dd9;
 }
 
 .search-box {
@@ -30,8 +30,12 @@
   font-size: 15px;
 }
 
+.search-box input:focus {
+  transform: scale(1.05);
+}
+
 .search-box button {
-  background: #2a4e6c;
+  background: #ff9f1c;
   backdrop-filter: blur(10px);
   color: #ffffff;
   border: none;
@@ -42,7 +46,8 @@
 }
 
 .search-box button:hover {
-  background: #1f3c52;
+  background: #e68a00;
+  transform: scale(1.05);
 }
 
 .weather-card {

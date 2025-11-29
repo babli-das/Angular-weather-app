@@ -35,8 +35,8 @@
 }
 
 .search-box button {
-  background: #ff9f1c;
-  backdrop-filter: blur(10px);
+  background: #0a3d91;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   color: #ffffff;
   border: none;
   border-radius: 12px;
@@ -46,7 +46,7 @@
 }
 
 .search-box button:hover {
-  background: #e68a00;
+  background: #052e70;
   transform: scale(1.05);
 }
 

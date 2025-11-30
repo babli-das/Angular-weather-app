@@ -6,13 +6,13 @@
   justify-content: center;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
-  color: #1a2b3c;
+  color: #1a1a1a;
   background: #3c7dd9;
 }
 
 .search-box {
   display: flex;
-  gap: 12px;
+  gap: 16px;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -155,11 +155,13 @@
 
 .info-item .label {
   font-size: 0.85rem;
+  color: #2f4f4f;
 }
 
 .info-item .value {
   font-weight: 600;
   font-size: 0.98rem;
+  color: #2f4f4f;
 }
 
 .error {
